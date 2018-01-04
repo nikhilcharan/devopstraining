@@ -1,19 +1,17 @@
-
-stage 'checkout'
-node ('master'){
-    checkout scm
-}
-
-stage 'build'
-node ('master'){
-
-     withEnv(["PATH+MAVEN=${tool 'maven3'}/bin"]){
-     withEnv(["PATH+JDK=${tool 'jdk8'}/bin"]){
-    
-    
-      
-    sh "mvn clean verify"
-
-}
-}
-}
+pipeline{
+    agent any
+        
+           stage("build using maven"){
+         
+            steps{
+                
+                
+                sh 'mvn clean deploy -f trucks/pom.xml'
+                
+            }
+        }
+        
+        
+        
+        
+    }
