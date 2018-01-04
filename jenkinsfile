@@ -1,6 +1,6 @@
 pipeline{
     agent any
-        stage('build using maven'){
+        stage('build'){
              steps{
                 sh 'mvn clean deploy -f trucks/pom.xml'  
             }
