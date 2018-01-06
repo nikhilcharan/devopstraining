@@ -1,18 +1,18 @@
-pipeline{
-
-  agent any
-
-  stages {
-    stage('Compile') {
-      steps {
-        echo "test"
-      }
-    }
-    stage('Build') {
-      steps {
-        echo "test2"
-      }
-    }
-  }
+stage 'checkout'
+node ('master'){
+    checkout scm
 }
 
+stage 'build'
+node ('master'){
+
+     withEnv(["PATH+MAVEN=${tool 'maven3'}/bin"]){
+     withEnv(["PATH+JDK=${tool 'jdk8'}/bin"]){
+    
+    
+      
+    sh "mvn clean verify"
+
+}
+}
+}
