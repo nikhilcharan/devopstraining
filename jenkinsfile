@@ -1,8 +1,18 @@
 pipeline{
-    agent any
-        stage('build'){
-             steps{
-                sh 'mvn clean deploy -f trucks/pom.xml'  
-            }
-        }    
+
+  agent any
+
+  stages {
+    stage('Compile') {
+      steps {
+        echo "test"
+      }
     }
+    stage('Build') {
+      steps {
+        echo "test2"
+      }
+    }
+  }
+}
+
