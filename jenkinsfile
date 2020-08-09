@@ -6,8 +6,8 @@ node ('master'){
 stage 'build'
 node ('master'){
 
-     withEnv(["PATH+MAVEN=${tool 'maven3'}/bin"]){
-     withEnv(["PATH+JDK=${tool 'jdk8'}/bin"]){
+     withEnv(["PATH+MAVEN=${tool 'maven3.6.3'}/bin"]){
+     withEnv(["PATH+JDK=${tool 'jdk11'}/bin"]){
     
     
       
