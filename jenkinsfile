@@ -19,7 +19,7 @@ pipeline {
 			echo "Running the functional test..."
                         }
         }
-        stage('test: load-&-security') {
+        stage('test: load & security') {
                 parallel {
                         stage('performance Test') {
                                 steps{
