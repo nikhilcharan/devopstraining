@@ -5,22 +5,7 @@ pipeline {
             steps {
                 git credentialsId: 'nikhilcharan', url: 'https://github.com/nikhilcharan/devopstraining.git'
             }
-        }
-        stage('Build') { 
-            steps {
-                // 
-            }
-        }
-        stage('Test') { 
-            steps {
-                // 
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                // 
-            }
-        }
+        }  
     }
   }
 
