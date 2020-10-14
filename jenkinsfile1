@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') { 
             steps {
-                // 
+                git credentialsId: 'nikhilcharan', url: 'https://github.com/nikhilcharan/devopstraining.git'
             }
         }
         stage('Build') { 
